@@ -12,7 +12,7 @@ export const PARTS = [
     meshes: meshes.boardBody,
   },
   {
-    id: "boardInlays",
+    id: "Inlay",
     label: "Board inlay",
     meshes: meshes.boardInlays,
   },
@@ -21,11 +21,11 @@ export const PARTS = [
     label: "Hinges",
     meshes: meshes.hinges,
   },
-  {
-    id: "tongues",
-    label: "Tongues",
-    meshes: meshes.tongues,
-  },
+  // {
+  //   id: "tongues",
+  //   label: "Tongues",
+  //   meshes: meshes.tongues,
+  // },
   {
     id: "dice",
     label: "Dice",

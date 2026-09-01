@@ -13,9 +13,9 @@ User picks options in the UI → those choices are stored → the 3D model updat
 │  UI         │     │  Zustand     │     │ applyConfig │     │  3D model    │
 │  (buttons)  │ ──► │  (memory)    │ ──► │  (worker)   │ ──► │  (GLB)       │
 └─────────────┘     └──────────────┘     └─────────────┘     └──────────────┘
-                           ▲                     │
-                           │                     │
-                    reads defaults          reads rules
+                           ▲                     │                   |
+                           │                     │                   |
+                    reads defaults          reads rules        reads clickMap.js
                            │                     │
                     ┌──────┴──────┐       ┌──────┴──────┐
                     │  parts.js   │       │  meshes.js  │
@@ -33,38 +33,38 @@ User picks options in the UI → those choices are stored → the 3D model updat
 
 ### Config files (the rules — you write these)
 
-| File | Job | Think of it as |
-|------|-----|----------------|
-| `src/config/materials.js` | Defines what colors look like | Paint swatches: `oak = #c4a574` |
-| `src/config/meshes.js` | Maps GLB names → which presets to use | Wiring diagram for the 3D file |
-| `src/config/parts.js` | Lists what the user can configure | Product menu for the UI |
+| File                      | Job                                   | Think of it as                  |
+| ------------------------- | ------------------------------------- | ------------------------------- |
+| `src/config/materials.js` | Defines what colors look like         | Paint swatches: `oak = #c4a574` |
+| `src/config/meshes.js`    | Maps GLB names → which presets to use | Wiring diagram for the 3D file  |
+| `src/config/parts.js`     | Lists what the user can configure     | Product menu for the UI         |
 
 ### Runtime files (code that runs)
 
-| File | Job | Think of it as |
-|------|-----|----------------|
-| `src/state/useConfiguratorStore.js` | Remembers user choices | Shopping cart: `{ dice: { style: "classic", look: "ivoryCream" } }` |
-| `src/lib/sceneMap.js` | Indexes the loaded GLB by name | Phone book: `"diePips"` → that 3D object |
-| `src/lib/applyConfig.js` | Reads choices + rules, updates the model | The worker that actually paints and shows/hides |
-| `src/components/scene/BackgammonSet.jsx` | Loads GLB, builds sceneMap, runs applyConfig | Glue between 3D and config |
+| File                                     | Job                                          | Think of it as                                                      |
+| ---------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------- |
+| `src/state/useConfiguratorStore.js`      | Remembers user choices                       | Shopping cart: `{ dice: { style: "classic", look: "ivoryCream" } }` |
+| `src/lib/sceneMap.js`                    | Indexes the loaded GLB by name               | Phone book: `"diePips"` → that 3D object                            |
+| `src/lib/applyConfig.js`                 | Reads choices + rules, updates the model     | The worker that actually paints and shows/hides                     |
+| `src/components/scene/BackgammonSet.jsx` | Loads GLB, builds sceneMap, runs applyConfig | Glue between 3D and config                                          |
 
 ### UI / display
 
-| File | Job |
-|------|-----|
-| `src/components/ui/ConfigPanel.jsx` | Sidebar shell |
-| `src/components/ui/MeshPicker.jsx` | Style picker (classic / edging / dent) |
-| `src/components/ui/MaterialPicker.jsx` | Color / look picker |
-| `src/components/scene/Scene.jsx` | Canvas, lights, camera |
+| File                                   | Job                                    |
+| -------------------------------------- | -------------------------------------- |
+| `src/components/ui/ConfigPanel.jsx`    | Sidebar shell                          |
+| `src/components/ui/MeshPicker.jsx`     | Style picker (classic / edging / dent) |
+| `src/components/ui/MaterialPicker.jsx` | Color / look picker                    |
+| `src/components/scene/Scene.jsx`       | Canvas, lights, camera                 |
 
 ## Two naming systems in the GLB
 
 The GLB has two different kinds of names. The config uses both:
 
-| Name type | Example | Used for |
-|-----------|---------|----------|
-| **Object names** | `diePips`, `checkersClassicDark` | Show / hide whole pieces |
-| **Material names** | `die`, `pips`, `classicDark` | Change colors |
+| Name type          | Example                          | Used for                 |
+| ------------------ | -------------------------------- | ------------------------ |
+| **Object names**   | `diePips`, `checkersClassicDark` | Show / hide whole pieces |
+| **Material names** | `die`, `pips`, `classicDark`     | Change colors            |
 
 - `meshParts` in `meshes.js` = object names (visibility)
 - Keys inside `materials` = material names (colors)
@@ -76,7 +76,7 @@ The GLB has two different kinds of names. The config uses both:
 **1. Store** (`useConfiguratorStore.js`) holds:
 
 ```js
-selections.dice = { style: "classic", look: "ivoryCream" }
+selections.dice = { style: "classic", look: "ivoryCream" };
 ```
 
 **2. `applyConfig` loops over `PARTS` from `parts.js`**
@@ -107,12 +107,12 @@ black: { color: "#1a1a1a", roughness: 0.5 }
 
 ## Why so many files?
 
-| If merged… | Problem |
-|------------|---------|
-| Everything in `BackgammonSet.jsx` | 3D component becomes huge and messy |
-| Colors only in Blender | User can't change anything in the app |
-| No `sceneMap` | Search the whole 3D tree on every click |
-| No Zustand | UI and 3D can't share state cleanly |
+| If merged…                        | Problem                                 |
+| --------------------------------- | --------------------------------------- |
+| Everything in `BackgammonSet.jsx` | 3D component becomes huge and messy     |
+| Colors only in Blender            | User can't change anything in the app   |
+| No `sceneMap`                     | Search the whole 3D tree on every click |
+| No Zustand                        | UI and 3D can't share state cleanly     |
 
 Split is:
 
@@ -124,14 +124,14 @@ Split is:
 
 ## What each file does NOT do
 
-| File | Does NOT |
-|------|----------|
-| `materials.js` | Know about dice vs checkers |
-| `meshes.js` | Store user selections |
-| `parts.js` | Touch the 3D model |
-| `sceneMap.js` | Decide colors or visibility |
-| `applyConfig.js` | Render React or load the GLB |
-| `BackgammonSet.jsx` | Define color presets |
+| File                | Does NOT                     |
+| ------------------- | ---------------------------- |
+| `materials.js`      | Know about dice vs checkers  |
+| `meshes.js`         | Store user selections        |
+| `parts.js`          | Touch the 3D model           |
+| `sceneMap.js`       | Decide colors or visibility  |
+| `applyConfig.js`    | Render React or load the GLB |
+| `BackgammonSet.jsx` | Define color presets         |
 
 ## Mental model
 

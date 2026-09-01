@@ -2,15 +2,33 @@ import { create } from "zustand";
 import { DEFAULT_SELECTIONS } from "../config/parts";
 
 export const useConfiguratorStore = create((set) => ({
+  // --- data ---
   selections: { ...DEFAULT_SELECTIONS },
+  focusedPartId: null,
 
-  setSelection: (partId, optionId) =>
+  // --- actions ---
+  // look = material and color combination
+  setLook: (partId, look) =>
     set((state) => ({
       selections: {
         ...state.selections,
-        [partId]: optionId,
+        [partId]: { ...state.selections[partId], look },
       },
     })),
 
-  reset: () => set({ selections: { ...DEFAULT_SELECTIONS } }),
+  // only for checkers. style = shape
+  setStyle: (partId, style) =>
+    set((state) => ({
+      selections: {
+        ...state.selections,
+        [partId]: { ...state.selections[partId], style },
+      },
+    })),
+
+  focusPart: (partId) => set({ focusedPartId: partId }),
+
+  clearFocus: () => set({ focusedPartId: null }),
+
+  reset: () =>
+    set({ selections: { ...DEFAULT_SELECTIONS }, focusedPartId: null }),
 }));

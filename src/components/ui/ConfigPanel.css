@@ -1,0 +1,10 @@
+.panel {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: auto;
+  background: gray;
+  padding: 1rem;
+}

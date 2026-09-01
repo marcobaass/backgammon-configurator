@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { buildSceneMap } from "../../lib/sceneMap";
 import { applyConfig } from "../../lib/applyConfig";
 import { useConfiguratorStore } from "../../state/useConfiguratorStore";
+import { getPartIdFromClick } from "../../lib/clickMap";
 
 export default function BackgammonSet(props) {
   const { scene } = useGLTF("/board15-animation.glb");
@@ -16,7 +17,26 @@ export default function BackgammonSet(props) {
     applyConfig(sceneMap, useConfiguratorStore.getState().selections);
   }, [scene]);
 
-  return <primitive object={scene} {...props} />;
+  // Subscribe to store
+  useEffect(() => {
+    const unsub = useConfiguratorStore.subscribe((state) => {
+      if (!sceneMapRef.current) return;
+      applyConfig(sceneMapRef.current, state.selections);
+    });
+
+    return unsub;
+  });
+
+  function handleClick(e) {
+    e.stopPropagation();
+    const partId = getPartIdFromClick(e.object);
+    console.log("clicked object:", e.object.name, "→ partId:", partId);
+    if (partId) {
+      useConfiguratorStore.getState().focusPart(partId);
+    }
+  }
+
+  return <primitive object={scene} onClick={handleClick} {...props} />;
 }
 
 useGLTF.preload("/board15-animation.glb");

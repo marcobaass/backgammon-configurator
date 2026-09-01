@@ -5,20 +5,33 @@ export const meshes = {
     classic: {
       meshParts: ["checkersClassicDark", "checkersClassicLight"],
       materials: {
-        ivoryCream: [MATERIAL_PRESETS.ebony, MATERIAL_PRESETS.ivory],
-        wooden: [MATERIAL_PRESETS.oak, MATERIAL_PRESETS.walnut],
+        ivoryCream: {
+          classicDark: MATERIAL_PRESETS.ebony,
+          classicLight: MATERIAL_PRESETS.ivory,
+        },
+        wooden: {
+          classicDark: MATERIAL_PRESETS.oak,
+          classicLight: MATERIAL_PRESETS.walnut,
+        },
       },
     },
     edging: {
       meshParts: ["checkersEdgingDark", "checkersEdgingLight"],
       materials: {
-        ivoryCream: [MATERIAL_PRESETS.ivory, MATERIAL_PRESETS.cream],
+        ivoryCream: {
+          EdgeRingDark: MATERIAL_PRESETS.ivory,
+          EdgeRingLight: MATERIAL_PRESETS.cream,
+          EdgeFaceLight: MATERIAL_PRESETS.cream,
+        },
       },
     },
     dent: {
       meshParts: ["checkersDentDark", "checkersDentLight"],
       materials: {
-        ivoryCream: [MATERIAL_PRESETS.ivory, MATERIAL_PRESETS.cream],
+        ivoryCream: {
+          dentDark: MATERIAL_PRESETS.ivory,
+          dentLight: MATERIAL_PRESETS.cream,
+        },
       },
     },
   },
@@ -26,20 +39,38 @@ export const meshes = {
     classic: {
       meshParts: ["boardLeft", "boardLid"],
       materials: {
-        ivoryCream: [MATERIAL_PRESETS.walnut, MATERIAL_PRESETS.walnut],
-        oakWalnut: [MATERIAL_PRESETS.oak, MATERIAL_PRESETS.walnut],
+        ivoryCream: {
+          boardFloor: MATERIAL_PRESETS.walnut,
+          boardLid: MATERIAL_PRESETS.walnut,
+        },
+        oakWalnut: {
+          boardFloor: MATERIAL_PRESETS.oak,
+          boardLid: MATERIAL_PRESETS.walnut,
+        },
       },
     },
   },
   boardInlays: {
     classic: {
-      meshParts: ["inlayLeft", "inlayRight"],
+      meshParts: [
+        "inlayLeft",
+        "inlayRight",
+        "tongueLightLeft",
+        "tongueDarkLeft",
+        "tongueLightRight",
+        "tongueDarkRight",
+      ],
       materials: {
-        ivoryCream: [
-          MATERIAL_PRESETS["green-felt"],
-          MATERIAL_PRESETS["green-felt"],
-        ],
-        oakWalnut: [MATERIAL_PRESETS.oak, MATERIAL_PRESETS.walnut],
+        ivoryCream: {
+          boardLidInlay: MATERIAL_PRESETS["green-felt"],
+          lidTongueLight: MATERIAL_PRESETS.ivory,
+          lidTongueDark: MATERIAL_PRESETS.ebony,
+        },
+        oakWalnut: {
+          boardLidInlay: MATERIAL_PRESETS.oak,
+          lidTongueLight: MATERIAL_PRESETS.oak,
+          lidTongueDark: MATERIAL_PRESETS.walnut,
+        },
       },
     },
   },
@@ -52,21 +83,10 @@ export const meshes = {
         "hingeRightBottom",
       ],
       materials: {
-        brass: [MATERIAL_PRESETS.brass],
-      },
-    },
-  },
-  tongues: {
-    classic: {
-      meshParts: [
-        "tongueLightLeft",
-        "tongueDarkLeft",
-        "tongueLightRight",
-        "tongueDarkRight",
-      ],
-      materials: {
-        ivoryCream: [MATERIAL_PRESETS.ivory, MATERIAL_PRESETS.ebony],
-        oakWalnut: [MATERIAL_PRESETS.oak, MATERIAL_PRESETS.walnut],
+        brass: {
+          lidHingeBottom: MATERIAL_PRESETS.brass,
+          lidHingeTop: MATERIAL_PRESETS.brass,
+        },
       },
     },
   },
@@ -89,8 +109,14 @@ export const meshes = {
     classic: {
       meshParts: ["doublingCube"],
       materials: {
-        ivoryCream: [MATERIAL_PRESETS.oak, MATERIAL_PRESETS.cream],
-        oakWalnut: [MATERIAL_PRESETS.oak, MATERIAL_PRESETS.walnut],
+        ivoryCream: {
+          doublingCube: MATERIAL_PRESETS.oak,
+          doublingNumbers: MATERIAL_PRESETS.cream,
+        },
+        oakWalnut: {
+          doublingCube: MATERIAL_PRESETS.oak,
+          doublingNumbers: MATERIAL_PRESETS.walnut,
+        },
       },
     },
   },
