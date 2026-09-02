@@ -39,22 +39,22 @@
 
 ## Phase 4: Scene Apply Logic
 
-- [ ] Implement `src/lib/buildSceneMap.js`
-  - [ ] Traverse GLB scene once after load
-  - [ ] Build lookup tables for meshes/materials by name
-- [ ] Implement `src/lib/applyConfig.js`
-  - [ ] For `meshVariant` parts:
-    - [ ] show selected variant meshes
-    - [ ] hide non-selected variant meshes
-  - [ ] For `material` parts:
-    - [ ] apply selected preset to targeted material(s)/slot(s)
-    - [ ] clone materials as needed to avoid global side-effects
+- [x] Implement `src/lib/buildSceneMap.js`
+  - [x] Traverse GLB scene once after load
+  - [x] Build lookup tables for meshes/materials by name
+- [x] Implement `src/lib/applyConfig.js`
+  - [x] For `meshVariant` parts:
+    - [x] show selected variant meshes
+    - [x] hide non-selected variant meshes
+  - [x] For `material` parts:
+    - [x] apply selected preset to targeted material(s)/slot(s)
+    - [x] clone materials as needed to avoid global side-effects
 
 ## Phase 5: React Three Fiber Integration
 
-- [ ] Update `BackgammonSet` to:
-  - [ ] build scene map once on GLB load
-  - [ ] call `applyConfig` when relevant selections change
+- [x] Update `BackgammonSet` to:
+  - [x] build scene map once on GLB load
+  - [x] call `applyConfig` when relevant selections change
 
 ## Phase 6: UI
 
@@ -79,3 +79,4 @@
 
 - [ ] Add persistence (store selections in URL or localStorage)
 - [ ] Add “randomize” or “save configuration” if desired
+- [ ] Add textures to checkers

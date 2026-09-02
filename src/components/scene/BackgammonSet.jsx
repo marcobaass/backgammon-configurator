@@ -25,7 +25,7 @@ export default function BackgammonSet(props) {
     });
 
     return unsub;
-  });
+  }, []);
 
   function handleClick(e) {
     e.stopPropagation();

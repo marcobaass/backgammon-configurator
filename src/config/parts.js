@@ -8,12 +8,12 @@ export const PARTS = [
   },
   {
     id: "boardBody",
-    label: "Board body",
+    label: "Casing",
     meshes: meshes.boardBody,
   },
   {
     id: "Inlay",
-    label: "Board inlay",
+    label: "Inlay",
     meshes: meshes.boardInlays,
   },
   {

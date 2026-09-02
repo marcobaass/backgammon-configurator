@@ -16,12 +16,24 @@ export const meshes = {
       },
     },
     edging: {
-      meshParts: ["checkersEdgingDark", "checkersEdgingLight"],
+      meshParts: [
+        "checkersEdgeRingDark",
+        "checkersEdgeRingLight",
+        "checkersEdgeFaceDark",
+        "checkersEdgeFaceLight",
+      ],
       materials: {
-        ivoryCream: {
-          EdgeRingDark: MATERIAL_PRESETS.ivory,
-          EdgeRingLight: MATERIAL_PRESETS.cream,
-          EdgeFaceLight: MATERIAL_PRESETS.cream,
+        silver: {
+          EdgeRingDark: MATERIAL_PRESETS.silver,
+          EdgeRingLight: MATERIAL_PRESETS.silver,
+          EdgeFaceLight: MATERIAL_PRESETS.ivory,
+          EdgeFaceDark: MATERIAL_PRESETS.ebony,
+        },
+        gold: {
+          EdgeRingDark: MATERIAL_PRESETS.gold,
+          EdgeRingLight: MATERIAL_PRESETS.gold,
+          EdgeFaceLight: MATERIAL_PRESETS.ivory,
+          EdgeFaceDark: MATERIAL_PRESETS.ebony,
         },
       },
     },
