@@ -1,17 +1,49 @@
-import { MATERIAL_PRESETS } from "./materials";
+import { MATERIAL_PRESETS as M } from "./materials";
 
 export const meshes = {
   checkers: {
     classic: {
       meshParts: ["checkersClassicDark", "checkersClassicLight"],
       materials: {
-        ivoryCream: {
-          classicDark: MATERIAL_PRESETS.ebony,
-          classicLight: MATERIAL_PRESETS.ivory,
+        ivoryEbony: {
+          classicDark: M.ebony,
+          classicLight: M.ivory,
         },
-        wooden: {
-          classicDark: MATERIAL_PRESETS.oak,
-          classicLight: MATERIAL_PRESETS.walnut,
+        agedOak: {
+          classicDark: M.walnut,
+          classicLight: M.oak,
+        },
+        cyperpunk: {
+          classicDark: M.neonMagenta,
+          classicLight: M.neonYellow,
+        },
+        hyrule: {
+          classicDark: M.hyruleGreen,
+          classicLight: M.triforceGold,
+        },
+        matrix: {
+          classicDark: M.matrixDark,
+          classicLight: M.matrixGreen,
+        },
+        tron: {
+          classicDark: M.tronBlack,
+          classicLight: M.tronCyan,
+        },
+        dune: {
+          classicDark: M.leather,
+          classicLight: M.sand,
+        },
+        casinoRoyale: {
+          classicDark: M.lacquerBlack,
+          classicLight: M.champagne,
+        },
+        portal: {
+          classicDark: M.portalBlue,
+          classicLight: M.portalOrange,
+        },
+        starWars: {
+          classicDark: M.lightsaberRed,
+          classicLight: M.lightsaberBlue,
         },
       },
     },
@@ -23,17 +55,65 @@ export const meshes = {
         "checkersEdgeFaceLight",
       ],
       materials: {
-        silver: {
-          EdgeRingDark: MATERIAL_PRESETS.silver,
-          EdgeRingLight: MATERIAL_PRESETS.silver,
-          EdgeFaceLight: MATERIAL_PRESETS.ivory,
-          EdgeFaceDark: MATERIAL_PRESETS.ebony,
+        silverIvory: {
+          EdgeRingDark: M.silver,
+          EdgeRingLight: M.silver,
+          EdgeFaceDark: M.ebony,
+          EdgeFaceLight: M.ivory,
         },
-        gold: {
-          EdgeRingDark: MATERIAL_PRESETS.gold,
-          EdgeRingLight: MATERIAL_PRESETS.gold,
-          EdgeFaceLight: MATERIAL_PRESETS.ivory,
-          EdgeFaceDark: MATERIAL_PRESETS.ebony,
+        goldEbony: {
+          EdgeRingDark: M.gold,
+          EdgeRingLight: M.gold,
+          EdgeFaceDark: M.ebony,
+          EdgeFaceLight: M.ivory,
+        },
+        cyberpunk: {
+          EdgeRingDark: M.neonCyan,
+          EdgeRingLight: M.neonCyan,
+          EdgeFaceDark: M.nightPurple,
+          EdgeFaceLight: M.neonYellow,
+        },
+        hyrule: {
+          EdgeRingDark: M.triforceGold,
+          EdgeRingLight: M.triforceGold,
+          EdgeFaceDark: M.sheikahBlue,
+          EdgeFaceLight: M.cream,
+        },
+        matrix: {
+          EdgeRingDark: M.matrixGreen,
+          EdgeRingLight: M.matrixGreen,
+          EdgeFaceDark: M.matrixDark,
+          EdgeFaceLight: M.black,
+        },
+        tron: {
+          EdgeRingDark: M.tronCyan,
+          EdgeRingLight: M.tronOrange,
+          EdgeFaceDark: M.tronBlack,
+          EdgeFaceLight: M.white,
+        },
+        dune: {
+          EdgeRingDark: M.spice,
+          EdgeRingLight: M.spice,
+          EdgeFaceDark: M.leather,
+          EdgeFaceLight: M.sand,
+        },
+        casinoRoyale: {
+          EdgeRingDark: M.gold,
+          EdgeRingLight: M.gold,
+          EdgeFaceDark: M.lacquerBlack,
+          EdgeFaceLight: M.champagne,
+        },
+        portal: {
+          EdgeRingDark: M.chrome,
+          EdgeRingLight: M.chrome,
+          EdgeFaceDark: M.portalBlue,
+          EdgeFaceLight: M.portalOrange,
+        },
+        starWars: {
+          EdgeRingDark: M.gunmetal,
+          EdgeRingLight: M.gunmetal,
+          EdgeFaceDark: M.black,
+          EdgeFaceLight: M.imperialWhite,
         },
       },
     },
@@ -41,27 +121,97 @@ export const meshes = {
       meshParts: ["checkersDentDark", "checkersDentLight"],
       materials: {
         ivoryCream: {
-          dentDark: MATERIAL_PRESETS.ivory,
-          dentLight: MATERIAL_PRESETS.cream,
+          dentDark: M.ebony,
+          dentLight: M.ivory,
+        },
+        agedOak: {
+          dentDark: M.walnut,
+          dentLight: M.oak,
+        },
+        cyberpunk: {
+          dentDark: M.neonMagenta,
+          dentLight: M.neonYellow,
+        },
+        hyrule: {
+          dentDark: M.hyruleGreen,
+          dentLight: M.cream,
+        },
+        matrix: {
+          dentDark: M.matrixDark,
+          dentLight: M.matrixGreen,
+        },
+        tron: {
+          dentDark: M.tronBlack,
+          dentLight: M.tronCyan,
+        },
+        dune: {
+          dentDark: M.leather,
+          dentLight: M.sand,
+        },
+        casinoRoyale: {
+          dentDark: M.lacquerCrimson,
+          dentLight: M.champagne,
+        },
+        portal: {
+          dentDark: M.portalBlue,
+          dentLight: M.sterileWhite,
+        },
+        starWars: {
+          dentDark: M.gunmetal,
+          dentLight: M.imperialWhite,
         },
       },
     },
   },
+
   boardBody: {
     classic: {
       meshParts: ["boardLeft", "boardLid"],
       materials: {
-        ivoryCream: {
-          boardFloor: MATERIAL_PRESETS.walnut,
-          boardLid: MATERIAL_PRESETS.walnut,
+        agedWalnut: {
+          boardFloor: M.walnut,
+          boardLid: M.walnut,
         },
-        oakWalnut: {
-          boardFloor: MATERIAL_PRESETS.oak,
-          boardLid: MATERIAL_PRESETS.walnut,
+        paleOak: {
+          boardFloor: M.oak,
+          boardLid: M.oak,
+        },
+        cyberpunk: {
+          boardFloor: M.nightPurple,
+          boardLid: M.nightPurple,
+        },
+        hyrule: {
+          boardFloor: M.hyruleGreen,
+          boardLid: M.hyruleGreen,
+        },
+        matrix: {
+          boardFloor: M.matrixDark,
+          boardLid: M.matrixDark,
+        },
+        tron: {
+          boardFloor: M.tronBlack,
+          boardLid: M.tronBlack,
+        },
+        dune: {
+          boardFloor: M.leather,
+          boardLid: M.leather,
+        },
+        casinoRoyale: {
+          boardFloor: M.lacquerBlack,
+          boardLid: M.lacquerBlack,
+        },
+        portal: {
+          boardFloor: M.sterileWhite,
+          boardLid: M.sterileWhite,
+        },
+        starWars: {
+          boardFloor: M.gunmetal,
+          boardLid: M.gunmetal,
         },
       },
     },
   },
+
   boardInlays: {
     classic: {
       meshParts: [
@@ -73,19 +223,60 @@ export const meshes = {
         "tongueDarkRight",
       ],
       materials: {
-        ivoryCream: {
-          boardLidInlay: MATERIAL_PRESETS["green-felt"],
-          lidTongueLight: MATERIAL_PRESETS.ivory,
-          lidTongueDark: MATERIAL_PRESETS.ebony,
+        classicFelt: {
+          boardLidInlay: M["green-felt"],
+          lidTongueLight: M.ivory,
+          lidTongueDark: M.ebony,
         },
-        oakWalnut: {
-          boardLidInlay: MATERIAL_PRESETS.oak,
-          lidTongueLight: MATERIAL_PRESETS.oak,
-          lidTongueDark: MATERIAL_PRESETS.walnut,
+        crimsonTable: {
+          boardLidInlay: M["red-felt"],
+          lidTongueLight: M.cream,
+          lidTongueDark: M.lacquerBlack,
+        },
+        cyberpunk: {
+          boardLidInlay: M["purple-felt"],
+          lidTongueLight: M.neonYellow,
+          lidTongueDark: M.neonMagenta,
+        },
+        hyrule: {
+          boardLidInlay: M["green-felt"],
+          lidTongueLight: M.triforceGold,
+          lidTongueDark: M.sheikahBlue,
+        },
+        matrix: {
+          boardLidInlay: M.matrixDark,
+          lidTongueLight: M.matrixGreen,
+          lidTongueDark: M.black,
+        },
+        tron: {
+          boardLidInlay: M["cyan-felt"],
+          lidTongueLight: M.tronCyan,
+          lidTongueDark: M.tronOrange,
+        },
+        dune: {
+          boardLidInlay: M["orange-felt"],
+          lidTongueLight: M.sand,
+          lidTongueDark: M.spice,
+        },
+        casinoRoyale: {
+          boardLidInlay: M["red-felt"],
+          lidTongueLight: M.champagne,
+          lidTongueDark: M.gold,
+        },
+        portal: {
+          boardLidInlay: M["blue-felt"],
+          lidTongueLight: M.portalOrange,
+          lidTongueDark: M.portalBlue,
+        },
+        starWars: {
+          boardLidInlay: M.black,
+          lidTongueLight: M.lightsaberBlue,
+          lidTongueDark: M.lightsaberRed,
         },
       },
     },
   },
+
   hinges: {
     classic: {
       meshParts: [
@@ -96,38 +287,148 @@ export const meshes = {
       ],
       materials: {
         brass: {
-          lidHingeBottom: MATERIAL_PRESETS.brass,
-          lidHingeTop: MATERIAL_PRESETS.brass,
+          lidHingeBottom: M.brass,
+          lidHingeTop: M.brass,
+        },
+        silver: {
+          lidHingeBottom: M.silver,
+          lidHingeTop: M.silver,
+        },
+        gold: {
+          lidHingeBottom: M.gold,
+          lidHingeTop: M.gold,
+        },
+        cyberpunk: {
+          lidHingeBottom: M.chrome,
+          lidHingeTop: M.chrome,
+        },
+        hyrule: {
+          lidHingeBottom: M.triforceGold,
+          lidHingeTop: M.triforceGold,
+        },
+        matrix: {
+          lidHingeBottom: M.matrixGreen,
+          lidHingeTop: M.matrixGreen,
+        },
+        tron: {
+          lidHingeBottom: M.tronCyan,
+          lidHingeTop: M.tronCyan,
+        },
+        dune: {
+          lidHingeBottom: M.copper,
+          lidHingeTop: M.copper,
+        },
+        casinoRoyale: {
+          lidHingeBottom: M.gold,
+          lidHingeTop: M.gold,
+        },
+        portal: {
+          lidHingeBottom: M.chrome,
+          lidHingeTop: M.chrome,
+        },
+        starWars: {
+          lidHingeBottom: M.gunmetal,
+          lidHingeTop: M.gunmetal,
         },
       },
     },
   },
+
   dice: {
     classic: {
       meshParts: ["diePips", "diePips2"],
       materials: {
-        ivoryCream: {
-          die: MATERIAL_PRESETS.ivory,
-          pips: MATERIAL_PRESETS.black,
+        ivoryEbony: {
+          die: M.ivory,
+          pips: M.black,
         },
-        oakWalnut: {
-          die: MATERIAL_PRESETS.oak,
-          pips: MATERIAL_PRESETS.gold,
+        agedOak: {
+          die: M.oak,
+          pips: M.walnut,
+        },
+        cyberpunk: {
+          die: M.neonYellow,
+          pips: M.neonMagenta,
+        },
+        hyrule: {
+          die: M.cream,
+          pips: M.triforceGold,
+        },
+        matrix: {
+          die: M.matrixDark,
+          pips: M.matrixGreen,
+        },
+        tron: {
+          die: M.tronBlack,
+          pips: M.tronCyan,
+        },
+        dune: {
+          die: M.sand,
+          pips: M.spice,
+        },
+        casinoRoyale: {
+          die: M.lacquerBlack,
+          pips: M.gold,
+        },
+        portal: {
+          die: M.sterileWhite,
+          pips: M.portalOrange,
+        },
+        starWars: {
+          die: M.imperialWhite,
+          pips: M.lightsaberRed,
+        },
+        mario: {
+          die: M.marioRed,
+          pips: M.coinGold,
         },
       },
     },
   },
+
   doublingCube: {
     classic: {
       meshParts: ["doublingCube"],
       materials: {
-        ivoryCream: {
-          doublingCube: MATERIAL_PRESETS.oak,
-          doublingNumbers: MATERIAL_PRESETS.cream,
+        agedOak: {
+          doublingCube: M.oak,
+          doublingNumbers: M.cream,
         },
-        oakWalnut: {
-          doublingCube: MATERIAL_PRESETS.oak,
-          doublingNumbers: MATERIAL_PRESETS.walnut,
+        walnutGold: {
+          doublingCube: M.walnut,
+          doublingNumbers: M.gold,
+        },
+        cyberpunk: {
+          doublingCube: M.nightPurple,
+          doublingNumbers: M.neonCyan,
+        },
+        hyrule: {
+          doublingCube: M.sheikahBlue,
+          doublingNumbers: M.triforceGold,
+        },
+        matrix: {
+          doublingCube: M.matrixDark,
+          doublingNumbers: M.matrixGreen,
+        },
+        tron: {
+          doublingCube: M.tronBlack,
+          doublingNumbers: M.tronOrange,
+        },
+        dune: {
+          doublingCube: M.leather,
+          doublingNumbers: M.spice,
+        },
+        casinoRoyale: {
+          doublingCube: M.lacquerCrimson,
+          doublingNumbers: M.gold,
+        },
+        portal: {
+          doublingCube: M.sterileWhite,
+          doublingNumbers: M.portalBlue,
+        },
+        starWars: {
+          doublingCube: M.gunmetal,
+          doublingNumbers: M.imperialWhite,
         },
       },
     },

@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+// import { OrbitControls } from "@react-three/drei";
 import BackgammonSet from "./BackgammonSet";
 import { Environment } from "@react-three/drei";
 export default function Scene() {
@@ -14,7 +14,7 @@ export default function Scene() {
         environmentIntensity={0.15}
       />
       <BackgammonSet />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
     </Canvas>
   );
 }

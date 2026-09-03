@@ -5,6 +5,8 @@ function applyPresetToMaterial(mat, preset) {
   if (preset.color != null) mat.color.set(preset.color);
   if (preset.roughness != null) mat.roughness = preset.roughness;
   if (preset.metalness != null) mat.metalness = preset.metalness;
+  if (preset.transparent != null) mat.transparent = preset.transparent;
+  if (preset.opacity != null) mat.opacity = preset.opacity;
   mat.needsUpdate = true;
 }
 
