@@ -2,8 +2,6 @@ import { useConfiguratorStore } from "../../state/useConfiguratorStore";
 import { PARTS } from "../../config/parts.js";
 import "./ConfigPanel.css";
 
-console.log("PARTS", PARTS);
-
 export default function ConfigPanel() {
   const focusedPartId = useConfiguratorStore((state) => state.focusedPartId);
   const clearFocus = useConfiguratorStore((state) => state.clearFocus);

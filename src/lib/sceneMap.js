@@ -23,8 +23,5 @@ export function buildSceneMap(scene) {
     }
   });
 
-  console.log("objects:", Object.keys(objectsByName).sort());
-  console.log("materials:", Object.keys(materialsByName).sort());
-
   return { objectsByName, materialsByName };
 }
