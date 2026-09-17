@@ -5,43 +5,43 @@ export const meshes = {
     classic: {
       meshParts: ["checkersClassicDark", "checkersClassicLight"],
       materials: {
-        ivoryEbony: {
+        IvoryEbony: {
           classicDark: M.ebony,
           classicLight: M.ivory,
         },
-        agedOak: {
+        AgedOak: {
           classicDark: M.walnut,
           classicLight: M.oak,
         },
-        cyperpunk: {
+        Cyberpunk: {
           classicDark: M.neonMagenta,
           classicLight: M.neonYellow,
         },
-        hyrule: {
+        Hyrule: {
           classicDark: M.hyruleGreen,
           classicLight: M.triforceGold,
         },
-        matrix: {
+        Matrix: {
           classicDark: M.matrixDark,
           classicLight: M.matrixGreen,
         },
-        tron: {
+        Tron: {
           classicDark: M.tronBlack,
           classicLight: M.tronCyan,
         },
-        dune: {
+        Dune: {
           classicDark: M.leather,
           classicLight: M.sand,
         },
-        casinoRoyale: {
+        CasinoRoyale: {
           classicDark: M.lacquerBlack,
           classicLight: M.champagne,
         },
-        portal: {
+        Portal: {
           classicDark: M.portalBlue,
           classicLight: M.portalOrange,
         },
-        starWars: {
+        StarWars: {
           classicDark: M.lightsaberRed,
           classicLight: M.lightsaberBlue,
         },
@@ -55,61 +55,61 @@ export const meshes = {
         "checkersEdgeFaceLight",
       ],
       materials: {
-        silverIvory: {
+        SilverIvory: {
           EdgeRingDark: M.silver,
           EdgeRingLight: M.silver,
           EdgeFaceDark: M.ebony,
           EdgeFaceLight: M.ivory,
         },
-        goldEbony: {
+        GoldEbony: {
           EdgeRingDark: M.gold,
           EdgeRingLight: M.gold,
           EdgeFaceDark: M.ebony,
           EdgeFaceLight: M.ivory,
         },
-        cyberpunk: {
+        Cyberpunk: {
           EdgeRingDark: M.neonCyan,
           EdgeRingLight: M.neonCyan,
           EdgeFaceDark: M.nightPurple,
           EdgeFaceLight: M.neonYellow,
         },
-        hyrule: {
+        Hyrule: {
           EdgeRingDark: M.triforceGold,
           EdgeRingLight: M.triforceGold,
           EdgeFaceDark: M.sheikahBlue,
           EdgeFaceLight: M.cream,
         },
-        matrix: {
+        Matrix: {
           EdgeRingDark: M.matrixGreen,
           EdgeRingLight: M.matrixGreen,
           EdgeFaceDark: M.matrixDark,
           EdgeFaceLight: M.black,
         },
-        tron: {
+        Tron: {
           EdgeRingDark: M.tronCyan,
           EdgeRingLight: M.tronOrange,
           EdgeFaceDark: M.tronBlack,
           EdgeFaceLight: M.white,
         },
-        dune: {
+        Dune: {
           EdgeRingDark: M.spice,
           EdgeRingLight: M.spice,
           EdgeFaceDark: M.leather,
           EdgeFaceLight: M.sand,
         },
-        casinoRoyale: {
+        CasinoRoyale: {
           EdgeRingDark: M.gold,
           EdgeRingLight: M.gold,
           EdgeFaceDark: M.lacquerBlack,
           EdgeFaceLight: M.champagne,
         },
-        portal: {
+        Portal: {
           EdgeRingDark: M.chrome,
           EdgeRingLight: M.chrome,
           EdgeFaceDark: M.portalBlue,
           EdgeFaceLight: M.portalOrange,
         },
-        starWars: {
+        StarWars: {
           EdgeRingDark: M.gunmetal,
           EdgeRingLight: M.gunmetal,
           EdgeFaceDark: M.black,
@@ -120,43 +120,43 @@ export const meshes = {
     dent: {
       meshParts: ["checkersDentDark", "checkersDentLight"],
       materials: {
-        ivoryCream: {
+        IvoryCream: {
           dentDark: M.ebony,
           dentLight: M.ivory,
         },
-        agedOak: {
+        AgedOak: {
           dentDark: M.walnut,
           dentLight: M.oak,
         },
-        cyberpunk: {
+        Cyberpunk: {
           dentDark: M.neonMagenta,
           dentLight: M.neonYellow,
         },
-        hyrule: {
+        Hyrule: {
           dentDark: M.hyruleGreen,
           dentLight: M.cream,
         },
-        matrix: {
+        Matrix: {
           dentDark: M.matrixDark,
           dentLight: M.matrixGreen,
         },
-        tron: {
+        Tron: {
           dentDark: M.tronBlack,
           dentLight: M.tronCyan,
         },
-        dune: {
+        Dune: {
           dentDark: M.leather,
           dentLight: M.sand,
         },
-        casinoRoyale: {
+        CasinoRoyale: {
           dentDark: M.lacquerCrimson,
           dentLight: M.champagne,
         },
-        portal: {
+        Portal: {
           dentDark: M.portalBlue,
           dentLight: M.sterileWhite,
         },
-        starWars: {
+        StarWars: {
           dentDark: M.gunmetal,
           dentLight: M.imperialWhite,
         },
@@ -168,43 +168,43 @@ export const meshes = {
     classic: {
       meshParts: ["boardLeft", "boardLid"],
       materials: {
-        agedWalnut: {
+        AgedWalnut: {
           boardFloor: M.walnut,
           boardLid: M.walnut,
         },
-        paleOak: {
+        PaleOak: {
           boardFloor: M.oak,
           boardLid: M.oak,
         },
-        cyberpunk: {
+        Cyberpunk: {
           boardFloor: M.nightPurple,
           boardLid: M.nightPurple,
         },
-        hyrule: {
+        Hyrule: {
           boardFloor: M.hyruleGreen,
           boardLid: M.hyruleGreen,
         },
-        matrix: {
+        Matrix: {
           boardFloor: M.matrixDark,
           boardLid: M.matrixDark,
         },
-        tron: {
+        Tron: {
           boardFloor: M.tronBlack,
           boardLid: M.tronBlack,
         },
-        dune: {
+        Dune: {
           boardFloor: M.leather,
           boardLid: M.leather,
         },
-        casinoRoyale: {
+        CasinoRoyale: {
           boardFloor: M.lacquerBlack,
           boardLid: M.lacquerBlack,
         },
-        portal: {
+        Portal: {
           boardFloor: M.sterileWhite,
           boardLid: M.sterileWhite,
         },
-        starWars: {
+        StarWars: {
           boardFloor: M.gunmetal,
           boardLid: M.gunmetal,
         },
@@ -223,52 +223,52 @@ export const meshes = {
         "tongueDarkRight",
       ],
       materials: {
-        classicFelt: {
+        ClassicFelt: {
           boardLidInlay: M["green-felt"],
           lidTongueLight: M.ivory,
           lidTongueDark: M.ebony,
         },
-        crimsonTable: {
+        CrimsonTable: {
           boardLidInlay: M["red-felt"],
           lidTongueLight: M.cream,
           lidTongueDark: M.lacquerBlack,
         },
-        cyberpunk: {
+        Cyberpunk: {
           boardLidInlay: M["purple-felt"],
           lidTongueLight: M.neonYellow,
           lidTongueDark: M.neonMagenta,
         },
-        hyrule: {
+        Cyrule: {
           boardLidInlay: M["green-felt"],
           lidTongueLight: M.triforceGold,
           lidTongueDark: M.sheikahBlue,
         },
-        matrix: {
+        Matrix: {
           boardLidInlay: M.matrixDark,
           lidTongueLight: M.matrixGreen,
           lidTongueDark: M.black,
         },
-        tron: {
+        Tron: {
           boardLidInlay: M["cyan-felt"],
           lidTongueLight: M.tronCyan,
           lidTongueDark: M.tronOrange,
         },
-        dune: {
+        Dune: {
           boardLidInlay: M["orange-felt"],
           lidTongueLight: M.sand,
           lidTongueDark: M.spice,
         },
-        casinoRoyale: {
+        CasinoRoyale: {
           boardLidInlay: M["red-felt"],
           lidTongueLight: M.champagne,
           lidTongueDark: M.gold,
         },
-        portal: {
+        Portal: {
           boardLidInlay: M["blue-felt"],
           lidTongueLight: M.portalOrange,
           lidTongueDark: M.portalBlue,
         },
-        starWars: {
+        StarWars: {
           boardLidInlay: M.black,
           lidTongueLight: M.lightsaberBlue,
           lidTongueDark: M.lightsaberRed,
@@ -286,23 +286,23 @@ export const meshes = {
         "hingeRightBottom",
       ],
       materials: {
-        brass: {
+        Brass: {
           lidHingeBottom: M.brass,
           lidHingeTop: M.brass,
         },
-        silver: {
+        Silver: {
           lidHingeBottom: M.silver,
           lidHingeTop: M.silver,
         },
-        gold: {
+        Gold: {
           lidHingeBottom: M.gold,
           lidHingeTop: M.gold,
         },
-        cyberpunk: {
-          lidHingeBottom: M.chrome,
-          lidHingeTop: M.chrome,
+        Cyberpunk: {
+          lidHingeBottom: M.nightPurple,
+          lidHingeTop: M.nightPurple,
         },
-        hyrule: {
+        Hyrule: {
           lidHingeBottom: M.triforceGold,
           lidHingeTop: M.triforceGold,
         },
@@ -310,23 +310,23 @@ export const meshes = {
           lidHingeBottom: M.matrixGreen,
           lidHingeTop: M.matrixGreen,
         },
-        tron: {
+        Tron: {
           lidHingeBottom: M.tronCyan,
           lidHingeTop: M.tronCyan,
         },
-        dune: {
+        Dune: {
           lidHingeBottom: M.copper,
           lidHingeTop: M.copper,
         },
-        casinoRoyale: {
-          lidHingeBottom: M.gold,
-          lidHingeTop: M.gold,
+        CasinoRoyale: {
+          lidHingeBottom: M.champagne,
+          lidHingeTop: M.champagne,
         },
-        portal: {
-          lidHingeBottom: M.chrome,
-          lidHingeTop: M.chrome,
+        Portal: {
+          lidHingeBottom: M.portalOrange,
+          lidHingeTop: M.portalOrange,
         },
-        starWars: {
+        StarWars: {
           lidHingeBottom: M.gunmetal,
           lidHingeTop: M.gunmetal,
         },
@@ -338,47 +338,47 @@ export const meshes = {
     classic: {
       meshParts: ["diePips", "diePips2"],
       materials: {
-        ivoryEbony: {
+        IvoryEbony: {
           die: M.ivory,
           pips: M.black,
         },
-        agedOak: {
+        AgedOak: {
           die: M.oak,
           pips: M.walnut,
         },
-        cyberpunk: {
+        Cyberpunk: {
           die: M.neonYellow,
           pips: M.neonMagenta,
         },
-        hyrule: {
+        Hyrule: {
           die: M.cream,
           pips: M.triforceGold,
         },
-        matrix: {
+        Matrix: {
           die: M.matrixDark,
           pips: M.matrixGreen,
         },
-        tron: {
+        Tron: {
           die: M.tronBlack,
           pips: M.tronCyan,
         },
-        dune: {
+        Dune: {
           die: M.sand,
           pips: M.spice,
         },
-        casinoRoyale: {
+        CasinoRoyale: {
           die: M.lacquerBlack,
           pips: M.gold,
         },
-        portal: {
+        Portal: {
           die: M.sterileWhite,
           pips: M.portalOrange,
         },
-        starWars: {
+        StarWars: {
           die: M.imperialWhite,
           pips: M.lightsaberRed,
         },
-        mario: {
+        Mario: {
           die: M.marioRed,
           pips: M.coinGold,
         },
@@ -390,43 +390,43 @@ export const meshes = {
     classic: {
       meshParts: ["doublingCube"],
       materials: {
-        agedOak: {
+        AgedOak: {
           doublingCube: M.oak,
           doublingNumbers: M.cream,
         },
-        walnutGold: {
+        WalnutGold: {
           doublingCube: M.walnut,
           doublingNumbers: M.gold,
         },
-        cyberpunk: {
+        Cyberpunk: {
           doublingCube: M.nightPurple,
           doublingNumbers: M.neonCyan,
         },
-        hyrule: {
+        Hyrule: {
           doublingCube: M.sheikahBlue,
           doublingNumbers: M.triforceGold,
         },
-        matrix: {
+        Matrix: {
           doublingCube: M.matrixDark,
           doublingNumbers: M.matrixGreen,
         },
-        tron: {
+        Tron: {
           doublingCube: M.tronBlack,
           doublingNumbers: M.tronOrange,
         },
-        dune: {
+        Dune: {
           doublingCube: M.leather,
           doublingNumbers: M.spice,
         },
-        casinoRoyale: {
+        CasinoRoyale: {
           doublingCube: M.lacquerCrimson,
           doublingNumbers: M.gold,
         },
-        portal: {
+        Portal: {
           doublingCube: M.sterileWhite,
           doublingNumbers: M.portalBlue,
         },
-        starWars: {
+        StarWars: {
           doublingCube: M.gunmetal,
           doublingNumbers: M.imperialWhite,
         },

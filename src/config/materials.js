@@ -127,7 +127,7 @@ export const MATERIAL_PRESETS = {
   },
   chrome: {
     color: "#e8eef2",
-    roughness: 0.15,
+    roughness: 0.35,
     metalness: 1,
     transparent: false,
   },

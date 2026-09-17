@@ -62,10 +62,6 @@ export default function BackgammonSet({
         lookAtCurrentRef.current.distanceTo(view.lookAt) < 0.01;
 
       if (arrived) {
-        camera.position.copy(view.position);
-        lookAtCurrentRef.current.copy(view.lookAt);
-        camera.lookAt(lookAtCurrentRef.current);
-
         const controls = controlsRef?.current;
         if (controls) {
           controls.target.copy(lookAtCurrentRef.current);
